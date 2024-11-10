@@ -1,0 +1,25 @@
+#include<stdio.h>
+int fib(int n);
+int main()
+{   int n;
+    printf("Enter value for n: \n");
+    scanf("%d",&n);
+    int f = fib(n);
+    printf("Fibonacci Series For %d number is %d",n,f);
+}
+int fib(int n)
+{
+    int fibN;
+    if(n==0)
+    {
+        return 0;
+    }
+    if(n==1)
+    {
+        return 1;
+    }
+    int fibNm1 = fib(n-1);
+    int fibNm2 = fib(n-2);
+    fibN = fibNm1 + fibNm2;
+    return fibN;
+}
